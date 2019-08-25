@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<div class="registration">
+		<form onsubmit="return myfun()">
+			
+			<label for="name">Full Name</label>
+			<input type="text" placeholder="Enter Full Name" id="namee" value=""><br />
+			<span id="massege"> </span>
+			<label for="email">Email</label>
+			<input type="email" id="emil" placeholder="Enter your Email" value=""><br />
+			<span id="masseges"></span>
+			<label for="pass">Password</label>
+			<input type="password" id="password" value=""><br />
+			<span id="messages"> </span>
+			<label for="re">Re-Type Password</label>
+			<input type="password" id="passwords" placeholder="Re-Enter Your Password" value="">
+			<span id="m"></span>
+			<label for="age">Age</label>
+			<input type="number" name="age" for="age" placeholder="Age">
+			<div class="dropdown">
+			<ul>
+				<li><a href="#">Religion </a>
+					<ul>
+						<li><a href="#">Islam</a></li>
+						<li><a href="#">Hindhu</a></li>
+						<li><a href="#">Cristian</a></li>
+						<li><a href="#">Buddisom</a></li>
+					</ul>
+
+				</li>
+			</ul>
+		</div>
+		<div class="gender">
+		<h2>Gender</h2>
+		<input type="radio" id="sex" name="sex">
+		<label for="sex">Male</label>
+		<input type="radio" name="sex" id="sex">
+		<label for="sex">Female</label>
+	</div>
+	<input type="checkbox" name="term" >agree with this condition.<br>
+	<input type="submit" name="asd" value="Submit">
+
+		</form>
+		
+
+	</div>
+	<script type="text/javascript" src="jquery.js"></script>
+	
+	<script type="text/javascript">
+		function myfun(){
+  	var c=document.getElementById("password").value;
+  	var d=document.getElementById("passwords").value;
+  	var a=document.getElementById("namee").value;
+  	
+  	if(c!=d){
+  		document.getElementById("messages").innerHTML="*password does not match";
+  		return false;
+
+  	}
+  	if(a.length<5)
+  		document.getElementById("massege").innerHTML="name cannot less than 5"
+  }
+		
+
+	</script>
+
+</body>
+</html>
